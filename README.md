@@ -35,6 +35,6 @@ hist = model.fit(xt_conv, yt, validation_split=0.2, callbacks=[early_stopping],
             
             
 # Conv2d 
-input_layer = Input(shape=(img_channels, img_rows, img_cols))
+input_layer = Input(shape=(img_rows, img_cols, img_channels))
 
-data in shape(img_channels, img_rows, img_cols)
+data in shape(n_samples, img_rows, img_cols, img_channels) <- 4D tensor
