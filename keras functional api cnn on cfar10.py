@@ -35,7 +35,7 @@ sgd = SGD(lr=0.01, decay=1e-6, momentum=0.9, nesterov=True)
 # loading data
 (x_train, y_train), (x_test, y_test) = cifar10.load_data()
 
-num_train, img_channels, img_rows, img_cols =  x_train.shape
+num_train, img_rows, img_cols, img_channels =  x_train.shape
 num_test, _, _, _ =  x_test.shape
 num_classes = len(np.unique(y_train))
 
@@ -77,7 +77,7 @@ def plot_model_history(model_history):
 ########################
 
 # input layer
-input_layer = Input(shape=(img_channels, img_rows, img_cols))
+input_layer = Input(shape=(img_rows, img_cols, img_channels))
 
 # first conv block
 conv1 = Conv2D(64, (1, 1), padding='same', activation='relu')(input_layer)
