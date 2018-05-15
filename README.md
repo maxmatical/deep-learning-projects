@@ -38,3 +38,19 @@ hist = model.fit(xt_conv, yt, validation_split=0.2, callbacks=[early_stopping],
 input_layer = Input(shape=(img_rows, img_cols, img_channels))
 
 data in shape(n_samples, img_rows, img_cols, img_channels) <- 4D tensor
+
+# pooling layers (upsampling) Conv1D
+keras.layers.MaxPooling1D(pool_size=2, strides=None, padding='valid')
+- pool_size: Integer, size of the max pooling windows. (Sliding window of size 2)
+- strides: Integer, or None. Factor by which to downscale. E.g. 2 will halve the input. If None, it will default to pool_size.
+
+# pooling layers (upsampling) Conv2D
+keras.layers.MaxPooling2D(pool_size=(2, 2), strides=None, padding='valid', data_format=None)
+- pool_size: integer or tuple of 2 integers, factors by which to downscale (vertical, horizontal). (2, 2) will halve the input in both spatial dimension. If only one integer is specified, the same window length will be used for both dimensions.
+- strides: Integer, tuple of 2 integers, or None. Strides values. If None, it will default to pool_size.
+
+
+
+# Padding/Stride (Conv layers)
+strides: An integer or tuple/list of a single integer, specifying the stride length of the convolution. Specifying any stride value != 1 is incompatible with specifying any dilation_rate value != 1.
+padding: One of "valid", "causal" or "same" (case-insensitive). "valid" means "no padding". "same" results in padding the input such that the output has the same length as the original input. 
