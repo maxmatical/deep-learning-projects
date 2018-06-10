@@ -1,3 +1,7 @@
+# Install packages on Rodeo (don't need pip3)
+! pip install pandas
+
+
 # deep-learning-projects
 
 Notes on reshaping data for conv/rnn layers
