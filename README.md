@@ -1,5 +1,7 @@
-# Install packages on Rodeo (don't need pip3)
-! pip install pandas
+# Install packages on Rodeo (with anaconda don't need pip3)
+! pip install tensorflow
+! pip install keras
+! pip install torchvision
 
 
 # deep-learning-projects
