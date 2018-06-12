@@ -28,7 +28,9 @@ RNN Input layer
 
 model.add(LSTM(32, kernel_initializer='glorot_normal', input_shape = (timestep, dim_per_timestep),
             kernel_regularizer=regularizers.l2(0.01)))
+            
 ...
+
 hist = model.fit(xt_lstm, yt, validation_split=0.2, callbacks=[early_stopping],
             epochs=20, batch_size = 64)
 
